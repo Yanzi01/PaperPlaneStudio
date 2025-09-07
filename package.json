@@ -1,0 +1,8 @@
+{
+  "name": "paper-plane-studio",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "mailersend": "^2.4.0"
+  }
+}
