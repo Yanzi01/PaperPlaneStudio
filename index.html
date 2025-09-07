@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paper Plane Studio — Game Portfolio</title>
+  <meta name="description" content="Game portfolio for Coin Pusher, Arcadia: Cloudbound, Ai Warzone: Call of Survivor, and Animal Dash: Wildlife Park." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { color-scheme: light dark; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    
+    :focus-visible { outline: 2px solid #6366f1; outline-offset: 2px; border-radius: 6px; }
+    /* Video and image aspect helpers */
+    .media-frame { aspect-ratio: 16 / 9; }
+  </style>
+</head>
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/70 border-b border-slate-200/60 dark:border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="#home" class="text-xl sm:text-2xl font-extrabold tracking-tight">
+        Paper Plane Studio
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm font-medium">
+        <a href="#games" class="hover:opacity-80">Games</a>
+        <a href="#coin-pusher" class="hover:opacity-80">Coin Pusher</a>
+        <a href="#contact" class="hover:opacity-80">Contact</a>
+        <a href="https://paperplanestudio.my.canva.site/" class="hover:opacity-80" target="_blank" rel="noopener">More</a>
+      </nav>
+      <button id="themeToggle" class="md:ml-6 p-2 rounded-xl border border-slate-300/60 dark:border-slate-700/60 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label="Toggle color theme">
+        <svg id="sun" class="h-5 w-5 hidden" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 15a5 5 0 100-10 5 5 0 000 10z"/><path fill-rule="evenodd" d="M10 1a1 1 0 011 1v1a1 1 0 11-2 0V2a1 1 0 011-1zm0 15a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM3.22 3.22a1 1 0 011.42 0l.7.7a1 1 0 01-1.42 1.42l-.7-.7a1 1 0 010-1.42zm11.36 11.36a1 1 0 011.42 0l.7.7a1 1 0 11-1.42 1.42l-.7-.7a1 1 0 010-1.42zM1 10a1 1 0 011-1h1a1 1 0 110 2H2a1 1 0 01-1-1zm15 0a1 1 0 011-1h1a1 1 0 110 2h-1a1 1 0 01-1-1zM3.22 16.78a1 1 0 010-1.42l.7-.7a1 1 0 111.42 1.42l-.7.7a1 1 0 01-1.42 0zM16.78 3.22a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42 0z" clip-rule="evenodd"/></svg>
+        <svg id="moon" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M17.293 13.293A8 8 0 116.707 2.707a8 8 0 1010.586 10.586z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">Arcadia: Cloudbound &mdash; and more from Paper Plane Studio</h1>
+          <p class="mt-5 text-lg text-slate-600 dark:text-slate-300">Welcome! Explore our games below. <strong>Coin Pusher</strong> is the flagship title, followed by <strong>Arcadia: Cloudbound</strong>, <strong>Ai Warzone: Call of Survivor</strong>, and <strong>Animal Dash: Wildlife Park</strong>. Each section includes a short trailer, screenshots, and a description.</p>
+          <div class="mt-8 flex gap-3">
+            <a href="#coin-pusher" class="inline-flex items-center rounded-2xl px-5 py-3 bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-500">Start with Coin Pusher</a>
+            <a href="#games" class="inline-flex items-center rounded-2xl px-5 py-3 border border-slate-300 dark:border-slate-700 font-semibold hover:bg-slate-100 dark:hover:bg-slate-800">See all games</a>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+          <!-- Hero preview video (replace src) -->
+          <video class="w-full h-full media-frame" src="assets/hero-preview.mp4" poster="assets/hero-poster.jpg" controls playsinline></video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Games Section -->
+  <section id="games" class="py-12 sm:py-16 bg-slate-50 dark:bg-slate-900/30 border-y border-slate-200/60 dark:border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-8">
+        <h2 class="text-3xl font-extrabold">Games</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400">Showcased in your preferred order</p>
+      </div>
+
+      <!-- 1) Coin Pusher -->
+      <article id="coin-pusher" class="py-10">
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <div class="rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <!-- Replace video src & poster -->
+            <video class="w-full h-full media-frame" src="assets/coin-pusher/coin-pusher-demo.mp4" poster="assets/coin-pusher/poster.jpg" controls playsinline></video>
+          </div>
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold">Coin Pusher</h3>
+            <p class="mt-3 text-slate-700 dark:text-slate-300">Dive into a highly-polished coin pusher with roguelike card mechanics. Build streaks, trigger power-ups, and chase rare drops. Designed for rewarding short sessions and deep progression.</p>
+            <ul class="mt-6 grid grid-cols-3 gap-3">
+              <!-- Replace image sources, keep alt text accurate -->
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/coin-pusher/shot1.jpg" alt="Coin Pusher gameplay screenshot 1" /></li>
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/coin-pusher/shot2.jpg" alt="Coin Pusher gameplay screenshot 2" /></li>
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/coin-pusher/shot3.jpg" alt="Coin Pusher gameplay screenshot 3" /></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <hr class="border-slate-200/60 dark:border-slate-800/60" />
+
+      <!-- 2) Arcadia: Cloudbound -->
+      <article id="arcadia" class="py-10">
+        <div class="grid lg:grid-cols-2 gap-8 items-start lg:grid-flow-dense">
+          <div class="order-2 lg:order-1">
+            <h3 class="text-2xl sm:text-3xl font-extrabold">Arcadia: Cloudbound</h3>
+            <p class="mt-3 text-slate-700 dark:text-slate-300">A 3D spot the difference adventure in the skies. Navigate floating isles, collect artifacts, and uncover the lore of Arcadia. Designed with stylized visuals and tight controls to feel great on controller and touch.</p>
+            <ul class="mt-6 grid grid-cols-3 gap-3">
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/arcadia/shot1.jpg" alt="Arcadia: Cloudbound screenshot 1" /></li>
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/arcadia/shot2.jpg" alt="Arcadia: Cloudbound screenshot 2" /></li>
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/arcadia/shot3.jpg" alt="Arcadia: Cloudbound screenshot 3" /></li>
+            </ul>
+          </div>
+          <div class="order-1 lg:order-2 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <video class="w-full h-full media-frame" src="assets/arcadia/arcadia-demo.mp4" poster="assets/arcadia/poster.jpg" controls playsinline></video>
+          </div>
+        </div>
+      </article>
+
+      <hr class="border-slate-200/60 dark:border-slate-800/60" />
+
+      <!-- 3) Ai Warzone: Call of Survivor -->
+      <article id="call-of-survivor" class="py-10">
+        <div class="grid lg:grid-cols-2 gap-8 items-start">
+          <div class="rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <video class="w-full h-full media-frame" src="assets/call-of-survivor/cos-demo.mp4" poster="assets/call-of-survivor/poster.jpg" controls playsinline></video>
+          </div>
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold">Ai Warzone: Call of Survivor</h3>
+            <p class="mt-3 text-slate-700 dark:text-slate-300">Survive waves of intelligent foes using tactics. Built to showcase crisp combat feel and replayable encounters.</p>
+            <ul class="mt-6 grid grid-cols-3 gap-3">
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/call-of-survivor/shot1.jpg" alt="Call of Survivor screenshot 1" /></li>
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/call-of-survivor/shot2.jpg" alt="Call of Survivor screenshot 2" /></li>
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/call-of-survivor/shot3.jpg" alt="Call of Survivor screenshot 3" /></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <hr class="border-slate-200/60 dark:border-slate-800/60" />
+
+      <!-- 4) Animal Dash: Wildlife Park -->
+      <article id="animal-dash" class="py-10">
+        <div class="grid lg:grid-cols-2 gap-8 items-start lg:grid-flow-dense">
+          <div class="order-2 lg:order-1">
+            <h3 class="text-2xl sm:text-3xl font-extrabold">Animal Dash: Wildlife Park</h3>
+            <p class="mt-3 text-slate-700 dark:text-slate-300">Simple hold and relase to play through a lively park full of creatures and challenges. Accessible fun with a skill ceiling for speedrunners.</p>
+            <ul class="mt-6 grid grid-cols-3 gap-3">
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/animal-dash/shot1.jpg" alt="Animal Dash screenshot 1" /></li>
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/animal-dash/shot2.jpg" alt="Animal Dash screenshot 2" /></li>
+              <li><img class="w-full h-28 object-cover rounded-xl border border-slate-200 dark:border-slate-800" src="assets/animal-dash/shot3.jpg" alt="Animal Dash screenshot 3" /></li>
+            </ul>
+          </div>
+          <div class="order-1 lg:order-2 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+            <video class="w-full h-full media-frame" src="assets/animal-dash/animal-dash-demo.mp4" poster="assets/animal-dash/poster.jpg" controls playsinline></video>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold">Contact Us</h2>
+      <p class="mt-3 text-slate-700 dark:text-slate-300">Have feedback, questions, or partnership ideas? Send us a message.</p>
+
+      <!--
+        TO DO: Add email backend
+      -->
+      <form id="contactForm" class="mt-8 grid gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6 shadow">
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label for="name" class="block text-sm font-semibold mb-1">Name</label>
+            <input id="name" name="name" type="text" required class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2" placeholder="Your name" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-semibold mb-1">Email</label>
+            <input id="email" name="email" type="email" required class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2" placeholder="you@example.com" />
+          </div>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-semibold mb-1">Message</label>
+          <textarea id="message" name="message" rows="5" required class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent px-3 py-2" placeholder="Tell us about your idea or issue..."></textarea>
+        </div>
+        <div class="flex items-center gap-3">
+          <button type="submit" class="inline-flex items-center rounded-2xl px-5 py-3 bg-indigo-600 text-white font-semibold shadow hover:bg-indigo-500">Send Message</button>
+          <span id="formToast" class="text-sm"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 dark:border-slate-800 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-600 dark:text-slate-400">
+      <p>© <span id="year"></span> Paper Plane Studio. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="#home" class="hover:opacity-80">Back to top</a>
+        <a href="#games" class="hover:opacity-80">Games</a>
+        <a href="#contact" class="hover:opacity-80">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+ 
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+
+    const btn = document.getElementById('themeToggle');
+    const sun = document.getElementById('sun');
+    const moon = document.getElementById('moon');
+    function setTheme(dark) {
+      const root = document.documentElement;
+      if (dark) {
+        root.classList.add('dark'); sun.classList.remove('hidden'); moon.classList.add('hidden');
+        localStorage.setItem('pps-theme', 'dark');
+      } else {
+        root.classList.remove('dark'); sun.classList.add('hidden'); moon.classList.remove('hidden');
+        localStorage.setItem('pps-theme', 'light');
+      }
+    }
+
+    const saved = localStorage.getItem('pps-theme');
+    if (saved) setTheme(saved === 'dark');
+    else setTheme(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    btn.addEventListener('click', () => setTheme(!document.documentElement.classList.contains('dark')));
+
+    // Contact form (dummy)
+    const form = document.getElementById('contactForm');
+    const toast = document.getElementById('formToast');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // Replace this block with a real submit (Formspree, etc.) if desired
+      toast.textContent = 'Thanks! Your message was prepared. Hook up Formspree to actually send.';
+      toast.className = 'text-green-600 dark:text-green-400';
+      form.reset();
+    });
+  </script>
+</body>
+</html>
